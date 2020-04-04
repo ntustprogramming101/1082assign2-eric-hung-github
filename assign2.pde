@@ -140,25 +140,6 @@ void draw() {
 			//set Groundhog-----------------------------------------
 
 			// if moving
-			if(keyPressed){
-				if(keyCode==UP&&groundhogPosY>2*chunkSize){
-					groundhogMove=true;
-					groundhogMoveY=1;
-				}
-				if(keyCode==DOWN&&groundhogPosY<5*chunkSize){
-					groundhogMove=true;
-					groundhogMoveY=-1;
-				}
-				if(keyCode==RIGHT&&groundhogPosX<chunkSize*7){
-					groundhogMove=true;
-					groundhogMoveX=1;
-				}
-				if(keyCode==LEFT&&groundhogPosX>0*chunkSize){
-					groundhogMove=true;
-					groundhogMoveX=-1;
-				}
-			}
-
 			if(groundhogMove){
 				if(groundhogMoveX==1){
 					groundhogPosX+=chunkSize/groundhogFrame;
@@ -186,6 +167,25 @@ void draw() {
 			}else{
 				image(groundhogIdle_img,groundhogPosX,groundhogPosY);
 			}	
+
+			if(keyPressed){
+				if(keyCode==UP&&groundhogPosY>2*chunkSize){
+					groundhogMove=true;
+					groundhogMoveY=1;
+				}
+				if(keyCode==DOWN&&groundhogPosY<5*chunkSize){
+					groundhogMove=true;
+					groundhogMoveY=-1;
+				}
+				if(keyCode==RIGHT&&groundhogPosX<chunkSize*7){
+					groundhogMove=true;
+					groundhogMoveX=1;
+				}
+				if(keyCode==LEFT&&groundhogPosX>0*chunkSize){
+					groundhogMove=true;
+					groundhogMoveX=-1;
+				}
+			}
 
 			//  judge----------------------------------------------
 
@@ -257,11 +257,6 @@ void draw() {
 			
 		break;	
 	}
-
-
-
-
-	
 }
 	/*
 	// laser setting
