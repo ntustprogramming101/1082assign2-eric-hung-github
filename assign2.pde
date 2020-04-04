@@ -94,7 +94,7 @@ void setup() {
 	groundhogMove=false;
 	groundhogMoveX=0;
 	groundhogMoveY=0;
-	groundhogFrameCount=1;
+	groundhogFrameCount=0;
 	groundhogPosX=4*chunkSize;
 	groundhogPosY=chunkSize;
 }
@@ -158,7 +158,7 @@ void draw() {
 				if(groundhogFrameCount>15){
 					groundhogMoveX=0;
 					groundhogMoveY=0;
-					groundhogFrameCount=1;
+					groundhogFrameCount=0;
 					groundhogMove=false;
 				}
 				groundhogFrameCount++;
@@ -262,7 +262,6 @@ void draw() {
 
 	
 }
-
 	/*
 	// laser setting
 	float laser_height=10,laserL_max=40,laser_range=2*chunkSize,laser_speed=2;
