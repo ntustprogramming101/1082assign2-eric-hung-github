@@ -112,9 +112,9 @@ void draw() {
 			
 			//set Sun
 			fill(255,255,0);
-			circle(canvas_width-50,50,sunInnerSize+sunOutterSize);
+			ellipse(canvas_width-50,50,sunInnerSize+sunOutterSize,sunInnerSize+sunOutterSize);
 			fill(253,184,19);
-			circle(canvas_width-50,50,sunInnerSize);
+			ellipse(canvas_width-50,50,sunInnerSize,sunInnerSize);
 
 			//set Grass
 			fill(124,204,25);
