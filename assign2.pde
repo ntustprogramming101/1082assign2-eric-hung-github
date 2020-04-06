@@ -94,7 +94,7 @@ void setup() {
 	groundhogMove=false;
 	groundhogMoveX=0;
 	groundhogMoveY=0;
-	groundhogFrameCount=0;
+	groundhogFrameCount=1;
 	groundhogPosX=4*chunkSize;
 	groundhogPosY=chunkSize;
 }
@@ -159,7 +159,7 @@ void draw() {
 					
 					groundhogMoveX=0;
 					groundhogMoveY=0;
-					groundhogFrameCount=0;
+					groundhogFrameCount=;
 					groundhogMove=false;
 				}
 				groundhogFrameCount++;
