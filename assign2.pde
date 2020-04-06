@@ -159,7 +159,7 @@ void draw() {
 					
 					groundhogMoveX=0;
 					groundhogMoveY=0;
-					groundhogFrameCount=;
+					groundhogFrameCount=1;
 					groundhogMove=false;
 				}
 				groundhogFrameCount++;
