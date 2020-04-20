@@ -253,7 +253,7 @@ void draw() {
 			
 		break;	
 	}
-	text(groundhogPosX+" "+groundhogPosY,width/2,height/2); 
+	//text(groundhogPosX+" "+groundhogPosY,width/2,height/2); 
 }
 	/*
 	// laser setting
