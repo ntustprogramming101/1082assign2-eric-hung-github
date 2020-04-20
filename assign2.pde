@@ -148,16 +148,12 @@ void draw() {
 				}else if(groundhogMoveX==-1){
 					groundhogPosX-=chunkSize/groundhogFrame;
 					image(groundhogLeft_img,groundhogPosX,groundhogPosY);
-				}else if(groundhogMoveY==1){
-					groundhogPosY-=chunkSize/groundhogFrame;
-					image(groundhogIdle_img,groundhogPosX,groundhogPosY);
 				}else if(groundhogMoveY==-1){
 					groundhogPosY+=chunkSize/groundhogFrame;
 					image(groundhogDown_img,groundhogPosX,groundhogPosY);
 				}
 
-				if(groundhogFrameCount>15){
-					
+				if(groundhogFrameCount>groundhogFrame){
 					groundhogMoveX=0;
 					groundhogMoveY=0;
 					groundhogFrameCount=1;
@@ -170,19 +166,15 @@ void draw() {
 			}	
 
 			if(keyPressed){
-				if(keyCode==UP&&groundhogPosY>2*chunkSize){
-					groundhogMove=true;
-					groundhogMoveY=1;
-				}
 				if(keyCode==DOWN&&groundhogPosY<5*chunkSize){
 					groundhogMove=true;
 					groundhogMoveY=-1;
 				}
-				if(keyCode==RIGHT&&groundhogPosX<chunkSize*7){
+				if(keyCode==RIGHT&&groundhogPosX+chunkSize<chunkSize*7){
 					groundhogMove=true;
 					groundhogMoveX=1;
 				}
-				if(keyCode==LEFT&&groundhogPosX>0*chunkSize){
+				if(keyCode==LEFT&&groundhogPosX-chunkSize>0*chunkSize){
 					groundhogMove=true;
 					groundhogMoveX=-1;
 				}
