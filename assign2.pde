@@ -33,7 +33,7 @@ int soliderSpeed=2,soldierPosX,soldierPosY;
 float groundhogPosX,groundhogPosY;
 boolean groundhogMove;
 int 	groundhogMoveX,groundhogMoveY;
-int groundhogFrame=16,groundhogFrameCount;
+int groundhogFrame=16,groundhogFrameCount=0;
 
 PImage backg_img;
 PImage gameover_img;
@@ -94,13 +94,13 @@ void setup() {
 	groundhogMove=false;
 	groundhogMoveX=0;
 	groundhogMoveY=0;
-	groundhogFrameCount=1;
+	groundhogFrameCount=0;
 	groundhogPosX=4*chunkSize;
 	groundhogPosY=chunkSize;
 }
 
 void draw() {
-	
+	//delay(300);
 	switch (gameState) {
 		case GAME_RUN :
 			// move item is latter draw
@@ -153,32 +153,35 @@ void draw() {
 					image(groundhogDown_img,groundhogPosX,groundhogPosY);
 				}
 
-				if(groundhogFrameCount>groundhogFrame){
+				if(groundhogFrameCount==groundhogFrame-1){
 					groundhogMoveX=0;
 					groundhogMoveY=0;
-					groundhogFrameCount=1;
+					groundhogFrameCount=0;
 					groundhogMove=false;
+				}else{
+					groundhogFrameCount++;
 				}
-				groundhogFrameCount++;
+				
 
 			}else{
 				image(groundhogIdle_img,groundhogPosX,groundhogPosY);
 			}	
 
-			if(keyPressed){
-				if(keyCode==DOWN&&groundhogPosY<5*chunkSize){
-					groundhogMove=true;
-					groundhogMoveY=-1;
+			
+				if(keyPressed&&!groundhogMove){
+					if(keyCode==DOWN&&groundhogPosY<5*chunkSize){
+						groundhogMove=true;
+						groundhogMoveY=-1;
+					}
+					if(keyCode==RIGHT&&groundhogPosX+chunkSize<=chunkSize*7){
+						groundhogMove=true;
+						groundhogMoveX=1;
+					}
+					if(keyCode==LEFT&&groundhogPosX-chunkSize>=0*chunkSize){
+						groundhogMove=true;
+						groundhogMoveX=-1;
+					}
 				}
-				if(keyCode==RIGHT&&groundhogPosX+chunkSize<chunkSize*7){
-					groundhogMove=true;
-					groundhogMoveX=1;
-				}
-				if(keyCode==LEFT&&groundhogPosX-chunkSize>0*chunkSize){
-					groundhogMove=true;
-					groundhogMoveX=-1;
-				}
-			}
 
 			//  judge----------------------------------------------
 
