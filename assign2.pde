@@ -33,7 +33,7 @@ int soliderSpeed=2,soldierPosX,soldierPosY;
 float groundhogPosX,groundhogPosY;
 boolean groundhogMove;
 int 	groundhogMoveX,groundhogMoveY;
-int groundhogFrame=15,groundhogFrameCount;
+int groundhogFrame=16,groundhogFrameCount;
 
 PImage backg_img;
 PImage gameover_img;
