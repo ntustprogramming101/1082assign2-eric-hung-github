@@ -100,7 +100,7 @@ void setup() {
 }
 
 void draw() {
-	text(groundhogPosX+" "+groundhogPosY,width/2,height/2); 
+	
 	switch (gameState) {
 		case GAME_RUN :
 			// move item is latter draw
@@ -258,6 +258,7 @@ void draw() {
 			
 		break;	
 	}
+	text(groundhogPosX+" "+groundhogPosY,width/2,height/2); 
 }
 	/*
 	// laser setting
