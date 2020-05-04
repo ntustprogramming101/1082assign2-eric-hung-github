@@ -1,4 +1,4 @@
-final int canvas_width=300,canvas_height=480;
+final int canvas_width=640,canvas_height=480;
 
 final int GAME_START = 0;
 final int GAME_RUN = 1;
@@ -55,7 +55,7 @@ PImage soil_img ;
 PImage solider_img ;
 
 void setup() {
-	size(300, 480, P2D);
+	size(640, 480, P2D);
 	
 	// image loading
 	backg_img =loadImage("img\\bg.jpg");
