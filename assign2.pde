@@ -55,7 +55,7 @@ PImage soil_img ;
 PImage solider_img ;
 
 void setup() {
-	size(640, 480, P2D);
+	size(300, 480, P2D);
 	
 	// image loading
 	backg_img =loadImage("img\\bg.jpg");
