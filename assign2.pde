@@ -1,4 +1,4 @@
-final int canvas_width=640,canvas_height=480;
+final int canvas_width=300,canvas_height=480;
 
 final int GAME_START = 0;
 final int GAME_RUN = 1;
